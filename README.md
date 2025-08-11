@@ -40,6 +40,18 @@ Useful flags:
 * `--sleep SECONDS` – pause between iterations (default 120)
 * `--once` – run a single iteration then exit (debug)
 
+## Visualising key insights
+
+After the agent has produced some artifacts in `outputs/<basename>/`, you can
+distill the most important points:
+
+```bash
+python3 visualize_outputs.py --base outputs/<basename> --model llama3.2:3b-instruct
+```
+
+The script reads all artifacts and creates a `highlights.md` file with concise
+bullet‑point insights.
+
 ## Notes
 
 The model is called through Ollama's HTTP API (`http://localhost:11434`).  Set `OLLAMA_BASE_URL` if your server runs elsewhere.  The code intentionally keeps prompts small and temperature low for faster, more deterministic output.
