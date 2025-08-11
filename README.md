@@ -30,7 +30,7 @@ Foundry Agent is a tiny Python script that chews on a large `.txt` file using a 
 ## Usage
 
 ```bash
-python3 foundry_agent.py --file /path/to/notes.txt --model llama3.2:3b
+python3 foundry_agent.py --file /notes.txt --model llama3.2:3b
 ```
 
 The agent creates an `outputs/<basename>/` directory next to the script and keeps iterating forever, mapping and reducing each lens in turn.  Press `Ctrl+C` to stop; the next run resumes from the last state.
