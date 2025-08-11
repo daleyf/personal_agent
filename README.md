@@ -20,7 +20,7 @@ Foundry Agent is a tiny Python script that chews on a large `.txt` file using a 
 1. Install Python 3.9+.
 2. Install [Ollama](https://ollama.com/download) and pull a small model:
    ```bash
-   ollama pull llama3.2:3b-instruct
+   ollama pull llama3.2:3b
    ```
 3. Install the Python dependency:
    ```bash
@@ -30,7 +30,7 @@ Foundry Agent is a tiny Python script that chews on a large `.txt` file using a 
 ## Usage
 
 ```bash
-python foundry_agent.py --file /path/to/notes.txt --model llama3.2:3b-instruct
+python3 foundry_agent.py --file /path/to/notes.txt --model llama3.2:3b
 ```
 
 The agent creates an `outputs/<basename>/` directory next to the script and keeps iterating forever, mapping and reducing each lens in turn.  Press `Ctrl+C` to stop; the next run resumes from the last state.
